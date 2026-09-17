@@ -37,7 +37,3 @@ while x < 3:
 for interacion in range(1,21):
     print(interacion)
     
-# realizar un programa muestre segun la opcion +(suma), -(resta), *(Multiplicacion), /(Division)
-# de dos numeros ingresados por teclado, nos pedira ingrese el primer numero y luego el segundo 
-# ingrese la operacion, el programa debe ser solo si al final de la operacion escribo la palabra salir 
-# usar funciones 
