@@ -16,21 +16,24 @@ def calcular(num1 : float, num2 : float, symbol : str)-> float:
 
     return operation
     
+def inicializar():
+    continue_loop = True 
+    while continue_loop: 
 
-continue_loop = True 
-while continue_loop: 
+        # pregunta al usuario por los números y el tipo de operacion 
+        num1 = float(input('Ingrese el primer número: '))
+        num2 = float(input('Ingrese le segundo número: '))
 
-    # pregunta al usuario por los números y el tipo de operacion 
-    num1 = int(input('Ingrese el primer número: '))
-    num2 = int(input('Ingrese le segundo número: '))
+        symbol = input('Ingrese el tipo de operación que desea realizar: ')
+        if symbol not in operations:
+            symbol = input('Símbolo no válido. Ingrese +, -, * o /: ')
 
-    symbol = input('Ingrese el tipo de operación que desea realizar: ')
-    if symbol not in operations:
-        symbol = input('Símbolo no válido. Ingrese +, -, * o /: ')
+        print(calcular(num1, num2, symbol))
 
-    print(calcular(num1, num2, symbol))
+        #lógica para parar o conntinuar con la calculadora 
+        answer = input('¿Quieres continuar? s/n: ')
+        if answer.lower() == 'n':
+            continue_loop = False 
 
-    #lógica para parar o conntinuar con la calculadora 
-    answer = input('¿Quieres continuar? s/n: ')
-    if answer.lower() == 'n':
-        continue_loop = False 
+if __name__ == '__main__':
+    inicializar()
